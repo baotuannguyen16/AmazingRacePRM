@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 sb1.setProgress(sb1.getProgress() + 5);
                 sb2.setProgress(sb2.getProgress() + 5);
                 sb3.setProgress(sb3.getProgress() + 5);
-
             }
 
             @Override
@@ -60,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtMoney.setText("100");
+            }
+        });
     }
 
     private void AnhXa(){
