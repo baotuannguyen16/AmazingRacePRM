@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Integer> result = new ArrayList<Integer>();
         CountDownTimer countDownTimer;
         countDownTimer = new CountDownTimer(10000, 100) {
-
             @Override
             public void onTick(long l) {
                 btnStart.setEnabled(false);
                 Random rand = new Random();
+
                 sb1.setProgress((int) (sb1.getProgress() + rand.nextInt(5)));
                 if (sb1.getProgress() >= 100) {
                     if(!result.contains(1)) {
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                             money = money - betShip1 - betShip2 - betShip3;
                             money += winningMoney;
                             txtMoney.setText(String.valueOf(money));
+                            result.clear();
                             btnStart.setEnabled(true);
 
                         } catch (NumberFormatException e) {
