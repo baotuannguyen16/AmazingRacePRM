@@ -131,21 +131,6 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CountDownTimer countDownTimer;
-                countDownTimer = new CountDownTimer(10000, 200) {
-                    @Override
-                    public void onTick(long l) {
-                        sb1.setProgress(sb1.getProgress() + randomSpeed());
-                        sb2.setProgress(sb2.getProgress() + randomSpeed());
-                        sb3.setProgress(sb3.getProgress() + randomSpeed());
-                    }
-
-                    @Override
-                    public void onFinish() {
-
-                    }
-                };
-
                 if (cb1.isChecked() || cb2.isChecked() || cb3.isChecked()) {
                     sb1.setProgress(0);
                     sb2.setProgress(0);
@@ -156,7 +141,10 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Vui lòng đặt cược trước khi chơi !", Toast.LENGTH_SHORT).show();
                 }
-            }
+            };
+
+
+
         });
 
         btnReset.setOnClickListener(new View.OnClickListener() {
