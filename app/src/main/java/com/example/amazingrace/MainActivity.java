@@ -131,10 +131,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (countDownTimer != null) {
-                    countDownTimer.cancel();
-                    countDownTimer = null;
-                }
+                CountDownTimer countDownTimer;
                 countDownTimer = new CountDownTimer(10000, 200) {
                     @Override
                     public void onTick(long l) {
