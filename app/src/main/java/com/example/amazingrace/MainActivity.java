@@ -13,7 +13,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton btnStart, btnReset;
     CheckBox cb1, cb2, cb3;
     SeekBar sb1, sb2, sb3;
+    CountDownTimer countDownTimer;
 
 
     @Override
@@ -130,7 +130,25 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cb1.isChecked() || cb2.isChecked() || cb3.isChecked()){
+                if (countDownTimer != null) {
+                    countDownTimer.cancel();
+                    countDownTimer = null;
+                }
+                countDownTimer = new CountDownTimer(10000, 200) {
+                    @Override
+                    public void onTick(long l) {
+                        sb1.setProgress(sb1.getProgress() + randomSpeed());
+                        sb2.setProgress(sb2.getProgress() + randomSpeed());
+                        sb3.setProgress(sb3.getProgress() + randomSpeed());
+                    }
+
+                    @Override
+                    public void onFinish() {
+
+                    }
+                };
+
+                if (cb1.isChecked() || cb2.isChecked() || cb3.isChecked()) {
                     sb1.setProgress(0);
                     sb2.setProgress(0);
                     sb3.setProgress(0);
@@ -151,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void AnhXa(){
+    private void AnhXa() {
         txtMoney = (TextView) findViewById(R.id.txtMoney);
         edtBetMoney = (EditText) findViewById(R.id.edtBetMoney);
         btnStart = (ImageButton) findViewById(R.id.btnStart);
@@ -162,5 +180,9 @@ public class MainActivity extends AppCompatActivity {
         sb1 = (SeekBar) findViewById(R.id.seekBarShip1);
         sb2 = (SeekBar) findViewById(R.id.seekBarShip2);
         sb3 = (SeekBar) findViewById(R.id.seekBarShip3);
+    }
+
+    private int randomSpeed() {
+        return (new Random().nextInt(5)) + 3;
     }
 }
