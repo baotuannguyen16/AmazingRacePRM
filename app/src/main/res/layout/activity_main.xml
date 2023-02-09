@@ -4,17 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
+
+
+  <EditText
+      android:id="@+id/etShip3"
+      android:layout_width="61dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="-2dp"
+      android:layout_marginBottom="22dp"
+      android:ems="10"
+      android:inputType="number"
+      android:text="0" />
+
+  <EditText
+      android:id="@+id/etShip2"
+      android:layout_width="61dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="0dp"
+      android:layout_marginBottom="83dp"
+      android:ems="10"
+      android:inputType="number"
+      android:text="0" />
 
   <CheckBox
       android:id="@+id/checkBox3"
-      android:layout_marginBottom="20dp"
-      android:layout_marginLeft="5dp"
-      android:layout_alignParentBottom="true"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="49dp"
+      android:layout_marginBottom="15dp" />
 
   <CheckBox
       android:id="@+id/checkBox2"
@@ -22,8 +46,9 @@
       android:layout_height="wrap_content"
       android:layout_above="@+id/checkBox3"
       android:layout_alignParentStart="true"
+      android:layout_marginStart="49dp"
       android:layout_marginLeft="5dp"
-      android:layout_marginBottom="20dp"/>
+      android:layout_marginBottom="18dp" />
 
   <CheckBox
       android:id="@+id/checkBox1"
@@ -31,46 +56,52 @@
       android:layout_height="wrap_content"
       android:layout_above="@id/checkBox2"
       android:layout_alignParentStart="true"
+      android:layout_marginStart="49dp"
       android:layout_marginLeft="5dp"
-      android:layout_marginBottom="20dp"/>
+      android:layout_marginBottom="20dp" />
 
   <SeekBar
       android:id="@+id/seekBarShip3"
-      android:layout_toRightOf="@id/checkBox3"
-      android:layout_alignParentBottom="true"
-      android:thumb="@drawable/layer_list_ship_wreck"
-      android:layout_width="match_parent"
+      android:layout_width="543dp"
       android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="0dp"
+      android:layout_marginBottom="10dp"
+      android:layout_toRightOf="@id/checkBox3"
       android:progressDrawable="@android:color/transparent"
-      android:layout_marginBottom="10dp"/>
+      android:thumb="@drawable/layer_list_ship_wreck" />
 
   <SeekBar
       android:id="@+id/seekBarShip2"
-      android:layout_above="@+id/seekBarShip3"
-      android:layout_toRightOf="@+id/checkBox2"
-      android:thumb="@drawable/layer_list_ship_light"
-      android:layout_width="match_parent"
+      android:layout_width="545dp"
       android:layout_height="wrap_content"
+      android:layout_above="@+id/seekBarShip3"
+      android:layout_marginLeft="3dp"
+      android:layout_marginBottom="7dp"
+      android:layout_toRightOf="@+id/checkBox2"
       android:progressDrawable="@android:color/transparent"
-      android:layout_marginBottom="10dp"/>
+      android:thumb="@drawable/layer_list_ship_light" />
 
   <SeekBar
       android:id="@+id/seekBarShip1"
-      android:layout_width="match_parent"
+      android:layout_width="544dp"
       android:layout_height="wrap_content"
       android:layout_above="@+id/seekBarShip2"
+      android:layout_marginLeft="2dp"
+      android:layout_marginBottom="9dp"
       android:layout_toRightOf="@+id/checkBox1"
       android:progressDrawable="@android:color/transparent"
-      android:thumb="@drawable/layer_list_ship_dark"
-      android:layout_marginBottom="10dp"/>
+      android:thumb="@drawable/layer_list_ship_dark" />
+
   <ImageView
       android:id="@+id/image"
-      android:src="@drawable/layer_list_tittle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="131dp"
+      android:layout_height="55dp"
+      android:layout_alignParentTop="true"
       android:layout_centerHorizontal="true"
+      android:layout_marginTop="-4dp"
       android:background="@null"
-      android:layout_marginTop="5dp"/>
+      android:src="@drawable/layer_list_tittle" />
 
   <LinearLayout
       android:id="@+id/LinearLayoutPoint"
@@ -128,4 +159,23 @@
         android:layout_marginLeft="30dp"
         android:src="@drawable/layer_list_reset" />
   </LinearLayout>
+
+  <EditText
+      android:id="@+id/etShip1"
+      android:layout_width="61dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:ems="10"
+      android:inputType="number"
+      android:text="0" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:text="TextView" />
+
 </RelativeLayout>
