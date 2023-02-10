@@ -10,27 +10,33 @@
 
   <EditText
       android:id="@+id/etShip3"
-      android:layout_width="61dp"
+      android:layout_width="50dp"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
       android:layout_alignParentBottom="true"
-      android:layout_marginStart="-2dp"
-      android:layout_marginBottom="22dp"
+      android:layout_marginStart="-1dp"
+      android:layout_marginBottom="12dp"
+      android:backgroundTint="#74c2ff"
       android:ems="10"
       android:inputType="number"
-      android:text="0" />
+      android:text="0"
+      android:textColor="#ff00"
+      android:textSize="25dp" />
 
   <EditText
       android:id="@+id/etShip2"
-      android:layout_width="61dp"
+      android:layout_width="50dp"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
       android:layout_alignParentBottom="true"
-      android:layout_marginStart="0dp"
-      android:layout_marginBottom="83dp"
+      android:layout_marginStart="-1dp"
+      android:layout_marginBottom="81dp"
+      android:backgroundTint="#a5baf3"
       android:ems="10"
       android:inputType="number"
-      android:text="0" />
+      android:text="0"
+      android:textColor="#ff00"
+      android:textSize="25dp" />
 
   <CheckBox
       android:id="@+id/checkBox3"
@@ -62,7 +68,7 @@
 
   <SeekBar
       android:id="@+id/seekBarShip3"
-      android:layout_width="543dp"
+      android:layout_width="573dp"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
       android:layout_marginLeft="0dp"
@@ -73,10 +79,12 @@
 
   <SeekBar
       android:id="@+id/seekBarShip2"
-      android:layout_width="545dp"
+      android:layout_width="575dp"
       android:layout_height="wrap_content"
       android:layout_above="@+id/seekBarShip3"
+      android:layout_alignParentEnd="true"
       android:layout_marginLeft="3dp"
+      android:layout_marginEnd="11dp"
       android:layout_marginBottom="7dp"
       android:layout_toRightOf="@+id/checkBox2"
       android:progressDrawable="@android:color/transparent"
@@ -87,7 +95,9 @@
       android:layout_width="544dp"
       android:layout_height="wrap_content"
       android:layout_above="@+id/seekBarShip2"
+      android:layout_alignParentEnd="true"
       android:layout_marginLeft="2dp"
+      android:layout_marginEnd="10dp"
       android:layout_marginBottom="9dp"
       android:layout_toRightOf="@+id/checkBox1"
       android:progressDrawable="@android:color/transparent"
@@ -95,8 +105,8 @@
 
   <ImageView
       android:id="@+id/image"
-      android:layout_width="131dp"
-      android:layout_height="55dp"
+      android:layout_width="150dp"
+      android:layout_height="100dp"
       android:layout_alignParentTop="true"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="-4dp"
@@ -122,11 +132,11 @@
       android:textSize="50sp"
       android:textStyle="bold"/>
 
-  <EditText
+  <TextView
       android:id="@+id/edtBetMoney"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:hint="Bet Money"
+      android:text="Bet Money"
       android:textSize="33dp"
       android:textColor="#ff00"
       android:textStyle="bold"
@@ -162,20 +172,16 @@
 
   <EditText
       android:id="@+id/etShip1"
-      android:layout_width="61dp"
+      android:layout_width="50dp"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
-      android:layout_centerVertical="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="0dp"
+      android:layout_marginTop="130dp"
+      android:textColor="#ff00"
+      android:textSize="25dp"
+      android:backgroundTint="#d8f7e5"
       android:ems="10"
       android:inputType="number"
       android:text="0" />
-
-  <TextView
-      android:id="@+id/textView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_centerVertical="true"
-      android:text="TextView" />
-
 </RelativeLayout>
