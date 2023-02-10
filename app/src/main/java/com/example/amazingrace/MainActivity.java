@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtMoney;
-    EditText edtBetMoney;
+    TextView txtBetMoney;
     EditText etShip1;
     EditText etShip2;
     EditText etShip3;
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void AnhXa() {
         txtMoney = (TextView) findViewById(R.id.txtMoney);
-        edtBetMoney = (EditText) findViewById(R.id.edtBetMoney);
+        txtBetMoney = (TextView) findViewById(R.id.txtBetMoney);
         btnStart = (ImageButton) findViewById(R.id.btnStart);
         btnReset = (ImageButton) findViewById(R.id.btnReset);
         cb1 = (CheckBox) findViewById(R.id.checkBox1);
