@@ -127,10 +127,12 @@ public class MainActivity extends AppCompatActivity {
 
                         } catch (NumberFormatException e) {
 
-                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Error",  Toast.LENGTH_SHORT).show();
 
                         }
                     }
+                } else {
+                    sb3.setProgress((int) (sb3.getProgress() + rand.nextInt(5)));
                 }
             }
 

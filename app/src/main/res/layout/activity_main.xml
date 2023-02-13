@@ -19,7 +19,7 @@
       android:backgroundTint="#74c2ff"
       android:ems="10"
       android:inputType="number"
-      android:hint="0"
+      android:text="0"
       android:textColor="#ff00"
       android:textSize="25dp" />
 
@@ -34,7 +34,7 @@
       android:backgroundTint="#a5baf3"
       android:ems="10"
       android:inputType="number"
-      android:hint="0"
+      android:text="0"
       android:textColor="#ff00"
       android:textSize="25dp" />
 
@@ -68,37 +68,40 @@
 
   <SeekBar
       android:id="@+id/seekBarShip3"
-      android:layout_width="600dp"
+      android:layout_width="573dp"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
       android:layout_marginLeft="0dp"
+      android:layout_marginBottom="10dp"
       android:layout_toRightOf="@id/checkBox3"
       android:progressDrawable="@android:color/transparent"
       android:thumb="@drawable/layer_list_ship_wreck" />
 
   <SeekBar
-      android:id="@+id/seekBarShip1"
-      android:layout_width="600dp"
+      android:id="@+id/seekBarShip2"
+      android:layout_width="575dp"
       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_centerHorizontal="true"
-      android:layout_marginLeft="4dp"
-      android:layout_marginBottom="149dp"
-      android:layout_toRightOf="@id/checkBox1"
+      android:layout_above="@+id/seekBarShip3"
+      android:layout_alignParentEnd="true"
+      android:layout_marginLeft="3dp"
+      android:layout_marginEnd="11dp"
+      android:layout_marginBottom="7dp"
+      android:layout_toRightOf="@+id/checkBox2"
       android:progressDrawable="@android:color/transparent"
-      android:thumb="@drawable/layer_list_ship_wreck" />
+      android:thumb="@drawable/layer_list_ship_light" />
 
   <SeekBar
-      android:id="@+id/seekBarShip2"
-      android:layout_width="600dp"
+      android:id="@+id/seekBarShip1"
+      android:layout_width="544dp"
       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_centerHorizontal="true"
-      android:layout_marginLeft="0dp"
-      android:layout_marginBottom="78dp"
-      android:layout_toRightOf="@id/checkBox2"
+      android:layout_above="@+id/seekBarShip2"
+      android:layout_alignParentEnd="true"
+      android:layout_marginLeft="2dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="9dp"
+      android:layout_toRightOf="@+id/checkBox1"
       android:progressDrawable="@android:color/transparent"
-      android:thumb="@drawable/layer_list_ship_wreck" />
+      android:thumb="@drawable/layer_list_ship_dark" />
 
   <ImageView
       android:id="@+id/image"
@@ -180,6 +183,5 @@
       android:backgroundTint="#d8f7e5"
       android:ems="10"
       android:inputType="number"
-      android:hint="0"
-      />
+      android:text="0" />
 </RelativeLayout>
