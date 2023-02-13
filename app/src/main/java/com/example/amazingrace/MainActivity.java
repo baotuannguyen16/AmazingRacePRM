@@ -51,29 +51,35 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Integer> result = new ArrayList<Integer>();
         CountDownTimer countDownTimer;
-        countDownTimer = new CountDownTimer(10000, 100) {
+        countDownTimer = new CountDownTimer(50000, 200) {
             @Override
             public void onTick(long l) {
                 btnStart.setEnabled(false);
                 Random rand = new Random();
 
-                sb1.setProgress((int) (sb1.getProgress() + rand.nextInt(5)));
                 if (sb1.getProgress() >= 100) {
                     if(!result.contains(1)) {
                         result.add(1);
                     }
+                } else {
+                    sb1.setProgress((int) (sb1.getProgress() + rand.nextInt(5)));
+
                 }
-                sb2.setProgress((int) (sb2.getProgress() + rand.nextInt(5)));
                 if (sb2.getProgress() >= 100) {
                     if(!result.contains(2)) {
                         result.add(2);
                     }
+                } else {
+                    sb2.setProgress((int) (sb2.getProgress() + rand.nextInt(5)));
+
                 }
-                sb3.setProgress((int) (sb3.getProgress() + rand.nextInt(5)));
                 if (sb3.getProgress() >= 100) {
                     if(!result.contains(3)) {
                         result.add(3);
                     }
+                } else {
+                    sb3.setProgress((int) (sb3.getProgress() + rand.nextInt(5)));
+
                 }
 
                 if (sb1.getProgress() >= 100 && sb2.getProgress() >= 100 && sb3.getProgress() >= 100) {
@@ -86,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                             int betShip1 = 0;
                             int betShip2 = 0;
                             int betShip3 = 0;
+
+
                             if (cb1.isChecked()) {
                                 String et1 = etShip1.getText().toString().trim();
                                 betShip1 = Integer.parseInt(et1);
@@ -98,7 +106,9 @@ public class MainActivity extends AppCompatActivity {
                                 String et3 = etShip3.getText().toString().trim();
                                 betShip3 = Integer.parseInt(et3);
                             }
+
                             String moneyString = txtMoney.getText().toString().trim();
+
                             int money = Integer.parseInt(moneyString);
 
                             if (result.get(0) == 1) {
@@ -108,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                             } else if (result.get(0) == 3) {
                                 winningMoney += betShip3 * 3;
                             }
+
                             money = money - betShip1 - betShip2 - betShip3;
                             money += winningMoney;
                             txtMoney.setText(String.valueOf(money));
@@ -115,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                             btnStart.setEnabled(true);
 
                         } catch (NumberFormatException e) {
+
                             Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
 
                         }
@@ -136,12 +148,50 @@ public class MainActivity extends AppCompatActivity {
                     sb1.setProgress(0);
                     sb2.setProgress(0);
                     sb3.setProgress(0);
+                    int betShip1 = 0;
+                    int betShip2 = 0;
+                    int betShip3 = 0;
 
-                    countDownTimer.start();
+
+                    if (cb1.isChecked()) {
+                        String et1 = etShip1.getText().toString().trim();
+                        betShip1 = Integer.parseInt(et1);
+                    }
+                    if (cb2.isChecked()) {
+                        String et2 = etShip2.getText().toString().trim();
+                        betShip2 = Integer.parseInt(et2);
+                    }
+                    if (cb3.isChecked()) {
+                        String et3 = etShip3.getText().toString().trim();
+                        betShip3 = Integer.parseInt(et3);
+                    }
+
+                    String moneyString = txtMoney.getText().toString().trim();
+
+                    int money = Integer.parseInt(moneyString);
+                    int totalBet = betShip1 + betShip2 + betShip3;
+
+                    if (money >= totalBet) {
+                        if (betShip1 < 0 || betShip2 <0 || betShip3 <0) {
+                            Toast.makeText(MainActivity.this, "Số tiền dặt không hợp lệ!", Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            countDownTimer.start();
+
+                        }
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "Bạn không đủ tiền để đặt cược !", Toast.LENGTH_SHORT).show();
+
+                    }
+
+
+
 
                 } else {
                     Toast.makeText(MainActivity.this, "Vui lòng đặt cược trước khi chơi !", Toast.LENGTH_SHORT).show();
                 }
+
             };
 
 
